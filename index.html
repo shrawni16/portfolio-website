@@ -1,86 +1,700 @@
-SB.DEV
-	•	PROJECTS
-	•	SKILLS
-	•	EXPERIENCE
-	•	CONTACT
-// FORWARD DEPLOYED ENGINEER · SOLUTIONS ENGINEER · AI BUILDER
-Srabani Banerjee
-6+ years turning complex enterprise technology into measurable business outcomes. Currently completing MSc Computer Science at QMUL — building at the intersection of AI, APIs, and customer value.
-VIEW PROJECTS
-LINKEDIN
-GITHUB
-6+
-YEARS EXPERIENCE
-135%
-QUOTA ATTAINMENT
-3
-AI PROJECTS BUILT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srabani Banerjee — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0A0A;
+    --surface: #111111;
+    --border: #1E1E1E;
+    --accent: #C8F135;
+    --accent2: #4ECAFF;
+    --text: #F0EDE6;
+    --muted: #666666;
+    --card: #141414;
+  }
 
-// PROJECTS
-Things I've built
-01
-Smartcat Translation Pipeline
-An end-to-end automated translation pipeline using the Smartcat REST API. Creates projects, uploads documents, polls for completion, and downloads translated files — fully automated in Python.
-Python
-REST API
-Automation
-Smartcat
-GitHub
-02
-AMI Meeting Summariser
-AI-powered meeting summarisation pipeline using Claude API on the AMI corpus. Parses multi-speaker XML transcripts, reconstructs conversation by turn, and generates structured reports with key decisions and action items. Directly connected to MSc research.
-Claude API
-NLP
-Python
-MSc Research
-GitHub
-03
-Sales Discovery Assistant
-An agentic AI tool that generates comprehensive pre-call discovery briefs for enterprise sales engineers. Input a company name and get pain points, discovery questions, KPIs, competitive landscape, and conversation starters — powered by Claude.
-Claude API
-Agentic AI
-Python
-Pre-Sales
-GitHub
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-// SKILLS
-What I work with
-TECHNICAL
-	•	REST APIs Python Postman Git & GitHub SQL
-AI & ML
-	•	Claude API LLM Workflows Agentic AI NLP Prompt Engineering
-PRE-SALES
-	•	Solution Architecture ROI Modeling Technical Discovery Executive Demos POV Delivery
-PLATFORMS
-	•	Smartcat Salesforce 6sense HighRadius HubSpot
+  html { scroll-behavior: smooth; }
 
-// EXPERIENCE
-Where I've worked
-2025 – 2026
-London, UK
-Queen Mary University of London
-MSC COMPUTER SCIENCE
-Research focus: Slide-aware meeting summarisation using LLMs on the AMI corpus. Building AI pipelines with REST APIs, agentic workflows, and NLP evaluation methodologies.
-2022 – 2024
-London, UK
-6sense
-SENIOR SOLUTIONS CONSULTANT
-Achieved 135% of quota in Q4 2023. Led strategic discovery, solution architecture, and ROI-focused executive demos. Helped enterprise clients achieve up to 25% improvement in campaign ROI through predictive analytics.
-2021 – 2022
-London, UK
-RecVue
-SENIOR SOLUTIONS ENGINEER
-Consulted enterprise finance teams on revenue management and billing transformation. Built ROI models and business cases that accelerated SaaS adoption and contract expansion.
-2018 – 2021
-Remote
-HighRadius
-SENIOR SOLUTION PRINCIPAL
-Designed and delivered digital transformation roadmaps for enterprise Order-to-Cash clients. Achieved 120%+ annual target in 2021, contributing to multi-million dollar SaaS wins.
-// CONTACT
-Let's connect
-Open to Forward Deployed Engineering and Solutions Engineering roles at AI-native SaaS companies.
-EMAIL ME
-LINKEDIN
-GITHUB
-© 2026 SRABANI BANERJEE
-BUILT WITH HTML · HOSTED ON GITHUB PAGES
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(200,241,53,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(78,202,255,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.2s;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1.05;
+    font-weight: 400;
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.4s;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 540px;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.6s;
+  }
+
+  .hero-cta {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.8s;
+  }
+
+  .btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0A0A0A;
+    border: 1px solid var(--accent);
+    font-weight: 500;
+  }
+  .btn-primary:hover { background: transparent; color: var(--accent); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { border-color: var(--text); }
+
+  .hero-stats {
+    margin-top: 5rem;
+    display: flex;
+    gap: 3rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 1s;
+  }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-top: 0.3rem;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .project-card:hover { border-color: #333; transform: translateY(-4px); }
+  .project-card:hover::before { transform: scaleX(1); }
+
+  .project-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 0.3rem 0.75rem;
+    border-radius: 3px;
+    background: rgba(200,241,53,0.08);
+    color: var(--accent);
+    border: 1px solid rgba(200,241,53,0.2);
+    letter-spacing: 0.05em;
+  }
+
+  .tag.blue {
+    background: rgba(78,202,255,0.08);
+    color: var(--accent2);
+    border-color: rgba(78,202,255,0.2);
+  }
+
+  .project-links { display: flex; gap: 1rem; }
+  .project-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .project-link:hover { color: var(--accent); }
+  .project-link::before { content: '→'; }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-group {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .skill-group-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill-list li {
+    font-size: 0.875rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .skill-list li::before {
+    content: '·';
+    color: var(--accent);
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  /* EXPERIENCE */
+  .experience-list { display: flex; flex-direction: column; gap: 0; }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+    padding-top: 4px;
+  }
+
+  .exp-company {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .exp-role {
+    font-size: 0.875rem;
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.75rem;
+  }
+
+  .exp-desc {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 6rem 3rem;
+  }
+
+  .contact-section .section-title { margin-bottom: 1rem; }
+
+  .contact-sub {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 3rem;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    section { padding: 4rem 1.5rem; }
+    .hero-stats { gap: 2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">SB.DEV</a>
+  <ul class="nav-links">
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="max-width:100%; padding-left: 3rem;">
+  <p class="hero-tag">// Forward Deployed Engineer · Solutions Engineer · AI Builder</p>
+  <h1>Srabani<br><em>Banerjee</em></h1>
+  <p class="hero-sub">6+ years turning complex enterprise technology into measurable business outcomes. Currently completing MSc Computer Science at QMUL — building at the intersection of AI, APIs, and customer value.</p>
+  <div class="hero-cta">
+    <a href="#projects" class="btn btn-primary">VIEW PROJECTS</a>
+    <a href="https://www.linkedin.com/in/srabani16/" target="_blank" class="btn btn-secondary">LINKEDIN</a>
+    <a href="https://github.com/shrawni16" target="_blank" class="btn btn-secondary">GITHUB</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">6+</div>
+      <div class="stat-label">YEARS EXPERIENCE</div>
+    </div>
+    <div>
+      <div class="stat-num">135%</div>
+      <div class="stat-label">QUOTA ATTAINMENT</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">AI PROJECTS BUILT</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label fade-in">// PROJECTS</p>
+  <h2 class="section-title fade-in">Things I've <em style="font-style:italic; color:var(--accent)">built</em></h2>
+  <div class="projects-grid">
+
+    <div class="project-card fade-in">
+      <p class="project-number">01</p>
+      <h3 class="project-title">Smartcat Translation Pipeline</h3>
+      <p class="project-desc">An end-to-end automated translation pipeline using the Smartcat REST API. Creates projects, uploads documents, polls for completion, and downloads translated files — fully automated in Python.</p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">REST API</span>
+        <span class="tag">Automation</span>
+        <span class="tag blue">Smartcat</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/shrawni16/smartcat-pipeline" target="_blank" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <p class="project-number">02</p>
+      <h3 class="project-title">AMI Meeting Summariser</h3>
+      <p class="project-desc">AI-powered meeting summarisation pipeline using Claude API on the AMI corpus. Parses multi-speaker XML transcripts, reconstructs conversation by turn, and generates structured reports with key decisions and action items. Directly connected to MSc research.</p>
+      <div class="project-tags">
+        <span class="tag">Claude API</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Python</span>
+        <span class="tag blue">MSc Research</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/shrawni16/meeting-summarizer" target="_blank" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <p class="project-number">03</p>
+      <h3 class="project-title">Sales Discovery Assistant</h3>
+      <p class="project-desc">An agentic AI tool that generates comprehensive pre-call discovery briefs for enterprise sales engineers. Input a company name and get pain points, discovery questions, KPIs, competitive landscape, and conversation starters — powered by Claude.</p>
+      <div class="project-tags">
+        <span class="tag">Claude API</span>
+        <span class="tag">Agentic AI</span>
+        <span class="tag">Python</span>
+        <span class="tag blue">Pre-Sales</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/shrawni16/sales-discovery-assistant" target="_blank" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label fade-in">// SKILLS</p>
+  <h2 class="section-title fade-in">What I work <em style="font-style:italic; color:var(--accent)">with</em></h2>
+  <div class="skills-grid">
+    <div class="skill-group fade-in">
+      <p class="skill-group-title">Technical</p>
+      <ul class="skill-list">
+        <li>REST APIs</li>
+        <li>Python</li>
+        <li>Postman</li>
+        <li>Git & GitHub</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-title">AI & ML</p>
+      <ul class="skill-list">
+        <li>Claude API</li>
+        <li>LLM Workflows</li>
+        <li>Agentic AI</li>
+        <li>NLP</li>
+        <li>Prompt Engineering</li>
+      </ul>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-title">Pre-Sales</p>
+      <ul class="skill-list">
+        <li>Solution Architecture</li>
+        <li>ROI Modeling</li>
+        <li>Technical Discovery</li>
+        <li>Executive Demos</li>
+        <li>POV Delivery</li>
+      </ul>
+    </div>
+    <div class="skill-group fade-in">
+      <p class="skill-group-title">Platforms</p>
+      <ul class="skill-list">
+        <li>Smartcat</li>
+        <li>Salesforce</li>
+        <li>6sense</li>
+        <li>HighRadius</li>
+        <li>HubSpot</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label fade-in">// EXPERIENCE</p>
+  <h2 class="section-title fade-in">Where I've <em style="font-style:italic; color:var(--accent)">worked</em></h2>
+  <div class="experience-list">
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">2025 – 2026<br>London, UK</div>
+      <div>
+        <p class="exp-company">Queen Mary University of London</p>
+        <p class="exp-role">MSC COMPUTER SCIENCE</p>
+        <p class="exp-desc">Research focus: Slide-aware meeting summarisation using LLMs on the AMI corpus. Building AI pipelines with REST APIs, agentic workflows, and NLP evaluation methodologies.</p>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">2022 – 2024<br>London, UK</div>
+      <div>
+        <p class="exp-company">6sense</p>
+        <p class="exp-role">SENIOR SOLUTIONS CONSULTANT</p>
+        <p class="exp-desc">Achieved 135% of quota in Q4 2023. Led strategic discovery, solution architecture, and ROI-focused executive demos. Helped enterprise clients achieve up to 25% improvement in campaign ROI through predictive analytics.</p>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">2021 – 2022<br>London, UK</div>
+      <div>
+        <p class="exp-company">RecVue</p>
+        <p class="exp-role">SENIOR SOLUTIONS ENGINEER</p>
+        <p class="exp-desc">Consulted enterprise finance teams on revenue management and billing transformation. Built ROI models and business cases that accelerated SaaS adoption and contract expansion.</p>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">2018 – 2021<br>Remote</div>
+      <div>
+        <p class="exp-company">HighRadius</p>
+        <p class="exp-role">SENIOR SOLUTION PRINCIPAL</p>
+        <p class="exp-desc">Designed and delivered digital transformation roadmaps for enterprise Order-to-Cash clients. Achieved 120%+ annual target in 2021, contributing to multi-million dollar SaaS wins.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section">
+  <p class="section-label fade-in">// CONTACT</p>
+  <h2 class="section-title fade-in">Let's <em style="font-style:italic; color:var(--accent)">connect</em></h2>
+  <p class="contact-sub fade-in">Open to Forward Deployed Engineering and Solutions Engineering roles at AI-native SaaS companies.</p>
+  <div class="contact-links fade-in">
+    <a href="mailto:banerjeesrabani0@gmail.com" class="btn btn-primary">EMAIL ME</a>
+    <a href="https://www.linkedin.com/in/srabani16/" target="_blank" class="btn btn-secondary">LINKEDIN</a>
+    <a href="https://github.com/shrawni16" target="_blank" class="btn btn-secondary">GITHUB</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 SRABANI BANERJEE</p>
+  <p>BUILT WITH HTML · HOSTED ON GITHUB PAGES</p>
+</footer>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
